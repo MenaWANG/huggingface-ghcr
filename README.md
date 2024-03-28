@@ -10,14 +10,14 @@ Fork this repository and run the GitHub Actions as-is so that you can register y
 
 1. Create a virtual env with `requirements.txt` to verify the app run 
     * ensure python 3.8 is specified for the virtual env, you can do this with tools such as `pipenv` and `anaconda`. 
-    * activate the virtual env and run `where uvicorn` to check for uvicorn installation
+    * activate the virtual env and run `which/where uvicorn` (linux/windows) to check for uvicorn installation
     * run `uvicorn --host 0.0.0.0 main:app` to start the app
     * the app will be available on `localhost:8000`
     * go to `localhost:8000/docs` to play with the app
     * if desired, install `huggingface-cli` in dev environment for helpful functions such as `scan-cashe` and `delete-cache` to clear up cache after the test. 
 2. Build the Docker container
     * download and install `docker` from [docker.com](www.docker.com)
-    * verify installation with `where docker`
+    * verify installation with `which/where docker` (linux/windows)
     * In the repo root where `Dockerfile` resides, run `docker build -t huggingface-local .`, where `-t` stands for `tag`
     * run the app in the container with `docker run -i -p 8000:8000 huggingface-local` where `-i` stands for `interactive` and `-p` stands for `port`. 
     * play with the app published from the container 
