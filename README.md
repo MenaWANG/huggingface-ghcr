@@ -28,6 +28,9 @@ Fork this repository and run the GitHub Actions as-is so that you can register y
     * Go to `Actions` and click on `CI` workflow, we can trigger its run from there. 
     * When the above run finishes, check in the github repo, you will find a package named `huggingface-ghcr` published. Click on it shows that it can be pulled from `ghcr` (github container registry) and get that FastAPI working with huggingface from anywhere. 
     * Authenticaion is needed to interact with this package, [details here](https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages#authenticating-to-github-packages). 
+    * Similarly, we can push container imanges to Azure Containter Registry([demo](https://github.com/alfredodeza/huggingface-azure-acr)) or Docker Hub([demo](https://github.com/alfredodeza/huggingface-docker)). One of the key steps is to add the relevant secrets to the repo secrets
+        * go to settings --> Secrets and variables --> Actions --> New repository secrete
+        * each secret then can be called from workflow yml files as `${{ secrets.<SECRET_NAME> }}`
 
 ## Userful links
 
