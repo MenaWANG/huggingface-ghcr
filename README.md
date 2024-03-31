@@ -8,6 +8,8 @@ Fork this repository and run the GitHub Actions as-is so that you can register y
 
 ## Steps
 
+At a very high leve, packaging a machine learning model or app means to create a container that can be used to deploy the model/app on different platforms which includes everything the model/app needs to run. 
+
 1. Create a virtual env with `requirements.txt` to verify the app run 
     * ensure python 3.8 is specified for the virtual env, you can do this with tools such as `pipenv` and `anaconda`. 
     * activate the virtual env and run `which/where uvicorn` (linux/windows) to check for uvicorn installation
